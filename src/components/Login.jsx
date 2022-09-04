@@ -3,25 +3,25 @@ import loginImg from '../assets/login.jpeg';
 
 const Login = () => {
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 h-screen w-full'>
         <div className='hidden sm:block'>
-            <img src={loginImg} alt="" />
+            <img className='w-full h-full object-cover' src={loginImg} alt="" />
         </div>
 
-        <div>
-            <form>
-                <h2>BRAND.</h2>
-                <div>
+        <div className='bg-gray-100 flex flex-col justify-center'>
+            <form className='max-w-[400px] w-full mx-auto bg-white p-4'>
+                <h2 className='text-4xl font-bold text-center py-6'>BRAND.</h2>
+                <div className='flex flex-col py-2'>
                     <label>Username</label>
-                    <input type="text"/>
+                    <input className='border p-2' type="text"/>
                 </div>
-                <div>
+                <div className='flex flex-col py-2'>
                     <label>Password</label>
-                    <input type="password"/>
+                    <input className='border p-2' type="password"/>
                 </div>
-                <button>Sign In</button>
-                <div>
-                    <p><input type="checkbox"/>Remember Me</p>
+                <button className='border w-full my-5 py-2 bg-indigo-600 rounded hover:bg-indigo-500 text-white hover:rounded-lg duration-300'>Sign In</button>
+                <div className='flex justify-between'>
+                    <p className='flex items-center'><input className='mr-2' type="checkbox"/>Remember Me</p>
                     <p>Create an account</p>
                 </div>
             </form>
